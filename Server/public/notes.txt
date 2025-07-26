@@ -1,0 +1,58 @@
+CallBack Funciton-> A function that is passed as an argument to another function and is executed later, usually after some operation completes.
+
+Ex->
+function greet(name, callback) {
+  console.log("Hi " + name);
+  callback();
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+greet("Ankit", sayBye);
+
+
+✅ In JavaScript, functions can broadly be divided into two main types:
+1. Normal Functions (aka Regular Functions)
+These are functions that use the function keyword.
+
+javascript
+Copy
+Edit
+function greet() {
+  console.log("Hello!");
+}
+✅ Key Traits:
+
+Can be hoisted (if declared normally)
+
+Have their own this context
+
+Can be anonymous or named
+
+2. Arrow Functions (ES6+)
+These use the => syntax.
+
+javascript
+Copy
+Edit
+const greet = () => {
+  console.log("Hello!");
+};
+✅ Key Traits:
+
+Shorter syntax
+
+Do not have their own this, arguments, or super
+
+Cannot be used as constructors (new keyword won't work)
+
+Great for callbacks and concise code
+
+🔁 So in short:
+Type	Syntax Example	this Context	Constructor
+Normal Function	function greet() {}	Own this	Yes
+Arrow Function	const x = () => {}	Lexical this	❌ No
+
+Map function always return an array which is 
